@@ -1,0 +1,4 @@
+<div id="jira-issue-vue-webpanel-inner"></div>
+<script>
+    $webResourceManager.requireResource("com.lmajnar.atlassian.plugin.wrm.jira-wrm-plugin:entrypoint-generalInit")
+</script>

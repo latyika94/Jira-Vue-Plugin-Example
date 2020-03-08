@@ -1,0 +1,52 @@
+{
+  "name": "@atlassian/glossary-of-terms-plugin",
+  "description": "The frontend component pieces and build tools for the glossary of terms plugin.",
+  "author": "Christopher Darroch <cdarroch@atlassian.com>",
+  "homepage": "https://bitbucket.org/serverecosystem/glossary-of-terms#readme",
+  "dependencies": {
+    "@atlassian/i18n-properties-loader": "^0.7.3",
+    "collect.js": "^4.20.3",
+    "es6-promise": "^4.2.8",
+    "html-webpack-plugin": "^3.2.0",
+    "idb": "^2.0.3",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2",
+    "vue": "^2.6.11",
+    "vue-loader": "^15.9.0",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "atlassian-webresource-webpack-plugin": "^4.8.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.2",
+    "directory-named-webpack-plugin": "^4.0.1",
+    "mini-css-extract-plugin": "^0.9.0",
+    "soy-loader": "^0.3.0",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-sources": "^1.4.3"
+  },
+  "engines": {
+    "node": ">=8.9.4",
+    "yarn": ">=1.16.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "bitbucket:serverecosystem/glossary-of-terms"
+  },
+  "//": [
+    "The build script will be invoked by maven in the process-resources phase",
+    "via the frontend-maven-plugin. It goes through Yarn rather than",
+    "calling the build tool directly, because the yarn call will work across environments."
+  ],
+  "scripts": {
+    "build": "yarn build:with-webpack",
+    "build:with-webpack": "webpack",
+    "test": "exit 0"
+  },
+  "license": "Apache-2.0",
+  "private": true
+}

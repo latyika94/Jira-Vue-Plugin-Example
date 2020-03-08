@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <param name="plugin-icon">images/pluginIcon.png</param>
+        <param name="plugin-logo">images/pluginLogo.png</param>
+        <vendor name="${project.organization.name}" url="${project.organization.url}"/>
+        <version>${project.version}</version>
+    </plugin-info>
+
+    <resource location="i18n.jira-wrm-plugin" name="i18n" type="i18n"/>
+
+    <web-panel key="jira-issue-vue-webpanel" location="atl.jira.view.issue.right.context" weight="10">
+        <label key="com.test.plugin.panel" />
+        <resource name="view" type="velocity" location="frontend/vm/vue-issue-webpanel.vm"/>
+    </web-panel>
+
+</atlassian-plugin>
