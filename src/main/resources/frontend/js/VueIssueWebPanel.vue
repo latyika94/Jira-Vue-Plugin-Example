@@ -19,16 +19,15 @@
         data() {
             return {
                 i18n: {
-                        text: AJS.I18n.getText("com.test.plugin.text"),
+                    text: AJS.I18n.getText("com.test.plugin.text"),
                     generate: AJS.I18n.getText("com.test.plugin.button")
                 },
-                lastNumber: 0,
                 generatedNumbers: []
             }
         },
         computed: {
             generatedNumberMessage() {
-                return AJS.I18n.getText("com.test.plugin.generated", [this.lastNumber])
+                return AJS.I18n.getText("com.test.plugin.generated", [collect(this.generatedNumbers).last()])
             },
             generatedNumbersMessage() {
                 return AJS.I18n.getText("com.test.plugin.array", [this.generatedNumbers.join(", ")])
@@ -39,8 +38,7 @@
         },
         methods: {
             genRandomNumber() {
-                this.lastNumber = this.getRandomInt(50)
-                this.generatedNumbers.push(this.lastNumber)
+                this.generatedNumbers.push(this.getRandomInt(50))
             },
             getRandomInt(max) {
                 return Math.floor(Math.random() * Math.floor(max));
@@ -54,6 +52,7 @@
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
     }
+
     .right {
         float: right;
     }
