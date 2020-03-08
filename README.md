@@ -1,3 +1,4 @@
+# Jira Vue Plugin Example
 This example show how you can bundle tools listing belows in an Atlassian Jira plugin.
 
  - Node.js
@@ -18,4 +19,4 @@ Run `atlas-package` command in the root directory.
 
 **Test plugin in Jira localhost webapp**
 Run `atlas-run` command in the root directory. After the webapp has been initialized open [http://localhost:2990/jira](http://localhost:2990/jira) in browser. Create a sample project and open an issue.
-You will see a new web panel with name "Vue Web Panel" on the right side of issue. In this webpanel you can generate random numbers and calculate the average of generated numbers (see: `VueIssueWebPanel.vue`).
+You will see a new web panel with name "Vue Web Panel" on the right side of issue. In this webpanel you can generate random numbers and calculate the average of generated numbers. See: [VueIssueWebPanel.vue](https://github.com/latyika94/Jira-Vue-Plugin-Example/blob/master/src/main/resources/frontend/js/VueIssueWebPanel.vue).
