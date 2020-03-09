@@ -18,7 +18,8 @@ module.exports = {
     mode: "production",
     context: FRONTEND_SRC_DIR,
     entry: {
-        "generalInit": "./js/vue-issue-webpanel-index.js"
+        "generalInit": "./js/vue-issue-webpanel-index.js",
+        "exportInit": "./js/export-init.js"
     },
     module: {
         rules: [
@@ -79,7 +80,8 @@ module.exports = {
         new WrmPlugin({
             pluginKey: PLUGIN_KEY,
             contextMap: {
-                "generalInit": ["atl.general"]
+                "generalInit": ["atl.general"],
+                "exportInit": ["atl.general"]
             },
             providedDependencies: providedDependencies,
             xmlDescriptors: path.resolve(MVN_OUTPUT_DIR, "META-INF", "plugin-descriptors", "wr-webpack-bundles.xml")
@@ -99,6 +101,7 @@ module.exports = {
     },
     output: {
         filename: "bundle.[name].js",
-        path: path.resolve(MVN_OUTPUT_DIR)
+        path: path.resolve(MVN_OUTPUT_DIR),
+        library: 'outputLibrary'
     }
 };

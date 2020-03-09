@@ -1,4 +1,10 @@
 <div id="jira-issue-vue-webpanel-inner"></div>
 <script>
     $webResourceManager.requireResource("com.lmajnar.atlassian.plugin.wrm.jira-wrm-plugin:entrypoint-generalInit")
+    $webResourceManager.requireResource("com.lmajnar.atlassian.plugin.wrm.jira-wrm-plugin:entrypoint-exportInit")
+    try {
+        outputLibrary.sayHi('John Doe')
+    } catch(err) {
+        console.error(err)
+    }
 </script>
